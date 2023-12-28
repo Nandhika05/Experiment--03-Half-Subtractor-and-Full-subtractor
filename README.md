@@ -51,10 +51,15 @@ RegisterNumber:212223040125
 PROGRAM:
 
 module project_4_1(a,b,borrow,diff);
+
 input a,b;
+
 output borrow,diff;
+
 assign borrow=~a&b;
+
 assign diff=a^b;
+
 endmodule
 
 TRUTH TABLE
@@ -74,10 +79,15 @@ TIMING DIAGRAM
 PROGRAM
 
 module project_4_2(a,b,bin,borrow,diff);
+
 input a,b,bin;
+
 output diff,borrow;
+
 assign diff=(a^b)^bin;
+
 assign borrow=((~a)&&bin)||(b&&bin)||((~a)&&b);
+
 endmodule
 
 TRUTH TABLE 
